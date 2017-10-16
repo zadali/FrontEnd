@@ -32,7 +32,7 @@
   }
 
   /*
-  Event Listeners keep your JavaScript out of your HTML markup -
+  Event Listeners keep your JavaScript out of the HTML -
   professional developers avoid (e.g.) "onclick" in HTML tags.
   This 'listens' for the user to submit the form.
   You can attach multiple events to any single element.
