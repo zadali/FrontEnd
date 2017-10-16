@@ -22,7 +22,6 @@
   // changes the text of the elements and adds a class
   function PerformGreeting() {
     myName.innerHTML = userName.value;
-    myHeader.innerHTML = userName.value;
      /*
     Without setting the variables first, the above would be much longer e.g.:
       document.getElementById("my-name").innerHTML = document.getElementById("user-name").value;
@@ -37,16 +36,18 @@
   This 'listens' for the user to submit the form.
   You can attach multiple events to any single element.
   */
+
   if (typeof event === "undefined") {
     getName.onsubmit = PerformGreeting; //Firefox
   } else {
     getName.addEventListener("submit", PerformGreeting);
-    event.preventDefault();
   }
+  
   /*
   Uncomment the line below - see what happens when you click
   in the grey area outside the input "submit" button. Why?
   */
+  
   // getName.addEventListener("click", PerformGreeting);
 
 }());
