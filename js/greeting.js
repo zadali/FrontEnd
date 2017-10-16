@@ -23,7 +23,7 @@
   function PerformGreeting() {
     myName.innerHTML = userName.value;
      /*
-    Without setting the variables first, the above would be much longer e.g.:
+    Without setting the variables first, the above line would be really long:
       document.getElementById("my-name").innerHTML = document.getElementById("user-name").value;
     */
     event.preventDefault(); // disables default form submission
