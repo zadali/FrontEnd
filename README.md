@@ -9,8 +9,8 @@ You must then create *your own repository on GitHub* for these files, then chang
 
 This exercise introduces a few fundamental Javascript principles:
 
-- *immediately-executed function expressions*
-- *event listeners*
+- *immediately-executed function expressions* (stay out of the global namespace)
+- *event listeners* (for capturing user actions)
 - *DOM manipulation* (changing HTML elements and/or their properties).
 
 Read through the comments in the code and try out the suggestions.
