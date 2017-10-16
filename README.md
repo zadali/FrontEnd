@@ -15,4 +15,4 @@ This exercise introduces a few fundamental Javascript principles:
 
 Read through the comments in the code and try out the suggestions.
 
-You can [view this page here](https://ctec3905.github.io/03-lab-javascript-2/).
+You can [view this page here](https://ctec3905.github.io/03-lab-javascript-1/).

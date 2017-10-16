@@ -1,7 +1,8 @@
 (function(){
 /* 
   everything is contained inside a function expression that's
-  immediately invoked when the script loads in the page
+  immediately invoked when the script loads in the page.
+  This keep your variables away from the global namespace
 */
   
   /*
