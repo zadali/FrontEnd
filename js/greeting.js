@@ -1,8 +1,14 @@
 (function(){
-/* 
-  everything is contained inside a function expression that's
-  immediately invoked when the script loads in the page.
-  This keep your variables away from the global namespace
+/*
+  An "Immediately-Invoked Function Expression" (IIFE) contains
+  all the code. the final brackets () ensure that it executes.
+
+  This is good practice because:
+  - it keeps your variables out of the global namespace
+  - local references to objects decrease lookup times
+  - it is a foundation for further code organisation
+
+  It is also an "anonymous" function because it has/needs no name.
 */
   
   /*
@@ -12,22 +18,35 @@
   let myName = document.getElementById("my-name"); 
   let userName = document.getElementById("user-name"); 
   let getName = document.getElementById("get-name");
-  let myHeader = document.getElementById("my-header");
   
   // changes the text of the elements and adds a class
   function PerformGreeting() {
     myName.innerHTML = userName.value;
     myHeader.innerHTML = userName.value;
-    myHeader.classList.add("change-me");
-    return false;
+     /*
+    Without setting the variables first, the above would be much longer e.g.:
+      document.getElementById("my-name").innerHTML = document.getElementById("user-name").value;
+    */
+    event.preventDefault(); // disables default form submission
+    return false; // prevents further "bubbling" up of event
   }
 
-  // 'listens' for the user to submit the form
+  /*
+  Event Listeners keep your JavaScript out of your HTML markup -
+  professional developers avoid (e.g.) "onclick" in HTML tags.
+  This 'listens' for the user to submit the form.
+  You can attach multiple events to any single element.
+  */
   if (typeof event === "undefined") {
     getName.onsubmit = PerformGreeting; //Firefox
   } else {
     getName.addEventListener("submit", PerformGreeting);
     event.preventDefault();
   }
+  /*
+  Uncomment the line below - see what happens when you click
+  in the grey area outside the input "submit" button. Why?
+  */
+  // getName.addEventListener("click", PerformGreeting);
 
 }());
