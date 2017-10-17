@@ -1,4 +1,4 @@
-# A simple introduction to JavaScript and the DOM
+# A simple introduction to JavaScript and the DOM ZADD
 
 If you have GIT available, *clone* this repository using `git clone https://github.com/CTEC3905/03-lab-javascript-1.git` instead of just downloading it.
 
